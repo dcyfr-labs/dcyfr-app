@@ -105,7 +105,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a
                 href="#templates"
-                className="rounded-lg bg-dcyfr-accent px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-dcyfr-accent"
+                className="rounded-lg bg-dcyfr-accent-700 px-6 py-3 text-sm font-semibold text-white transition-opacity hover:bg-dcyfr-accent-600 focus-visible:outline-2 focus-visible:outline-dcyfr-accent"
               >
                 Browse Templates
               </a>
@@ -132,7 +132,7 @@ export default function HomePage() {
             ].map(({ value, label }) => (
               <div key={label} className="flex-1 px-6 py-4 text-center">
                 <p className="text-lg font-bold text-white">{value}</p>
-                <p className="text-xs text-dcyfr-primary-400">{label}</p>
+                <p className="text-xs text-dcyfr-primary-300">{label}</p>
               </div>
             ))}
           </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
                     >
                       <div>
                         <p className="font-medium text-white">{t.name}</p>
-                        <p className="text-xs text-dcyfr-primary-400">{t.stack.join(' · ')}</p>
+                        <p className="text-xs text-dcyfr-primary-300">{t.stack.join(' · ')}</p>
                       </div>
                       <a
                         href={t.vercelDeployUrl!}

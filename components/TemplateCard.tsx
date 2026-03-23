@@ -44,7 +44,7 @@ export function TemplateCard({ template }: TemplateCardProps) {
         >
           {template.maturity}
         </span>
-        <span className="text-xs text-dcyfr-primary-400">
+        <span className="text-xs text-dcyfr-primary-300">
           {template.framework}
         </span>
       </div>
@@ -73,7 +73,7 @@ export function TemplateCard({ template }: TemplateCardProps) {
       </div>
 
       {/* Feature icons */}
-      <div className="mb-5 flex gap-3 text-xs text-dcyfr-primary-400">
+      <div className="mb-5 flex gap-3 text-xs text-dcyfr-primary-300">
         {template.features.typescript && (
           <span title="TypeScript" className="flex items-center gap-1">
             <span className="text-blue-400">TS</span>
@@ -114,9 +114,9 @@ export function TemplateCard({ template }: TemplateCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             className={clsx(
-              'flex-1 rounded-lg bg-dcyfr-accent px-3 py-2',
+              'flex-1 rounded-lg bg-dcyfr-accent-700 px-3 py-2',
               'text-center text-sm font-medium text-white',
-              'transition-opacity hover:opacity-90'
+              'transition-colors hover:bg-dcyfr-accent-600'
             )}
           >
             Use Template
@@ -128,9 +128,9 @@ export function TemplateCard({ template }: TemplateCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             className={clsx(
-              'flex-1 rounded-lg bg-dcyfr-accent px-3 py-2',
+              'flex-1 rounded-lg bg-dcyfr-accent-700 px-3 py-2',
               'text-center text-sm font-medium text-white',
-              'transition-opacity hover:opacity-90'
+              'transition-colors hover:bg-dcyfr-accent-600'
             )}
           >
             View on GitHub

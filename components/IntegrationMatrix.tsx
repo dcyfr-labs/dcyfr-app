@@ -75,7 +75,7 @@ export function IntegrationMatrix({ templates }: IntegrationMatrixProps) {
               <td className="px-4 py-3">
                 <div>
                   <p className="font-medium text-white">{template.name}</p>
-                  <p className="text-xs text-dcyfr-primary-400">{template.framework}</p>
+                  <p className="text-xs text-dcyfr-primary-300">{template.framework}</p>
                 </div>
               </td>
               {FEATURES.map(({ key }) => (

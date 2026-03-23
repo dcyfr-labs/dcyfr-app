@@ -37,7 +37,7 @@ function FilterButton({
       className={clsx(
         'rounded-full border px-3 py-1.5 text-xs font-medium transition-all duration-150',
         active
-          ? 'border-dcyfr-accent bg-dcyfr-accent text-white'
+          ? 'border-dcyfr-accent-700 bg-dcyfr-accent-700 text-white'
           : 'border-dcyfr-primary-600/60 text-dcyfr-primary-300 hover:border-dcyfr-accent/50 hover:text-white'
       )}
     >
@@ -77,7 +77,7 @@ export function TemplateFilters({
       {/* Filter rows */}
       <div className="space-y-3">
         <div>
-          <p className="mb-2 text-xs font-medium text-dcyfr-primary-400 uppercase tracking-wide">
+          <p className="mb-2 text-xs font-medium text-dcyfr-primary-300 uppercase tracking-wide">
             Framework
           </p>
           <div className="flex flex-wrap gap-2">
@@ -94,7 +94,7 @@ export function TemplateFilters({
         </div>
 
         <div>
-          <p className="mb-2 text-xs font-medium text-dcyfr-primary-400 uppercase tracking-wide">
+          <p className="mb-2 text-xs font-medium text-dcyfr-primary-300 uppercase tracking-wide">
             Stack
           </p>
           <div className="flex flex-wrap gap-2">
@@ -111,7 +111,7 @@ export function TemplateFilters({
         </div>
 
         <div>
-          <p className="mb-2 text-xs font-medium text-dcyfr-primary-400 uppercase tracking-wide">
+          <p className="mb-2 text-xs font-medium text-dcyfr-primary-300 uppercase tracking-wide">
             Maturity
           </p>
           <div className="flex flex-wrap gap-2">
