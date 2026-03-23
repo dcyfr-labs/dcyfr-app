@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { CodePreview } from '@/components/CodePreview';
+import { CodePreview, type CodeFile } from '@/components/CodePreview';
 import templates from '@/data/templates.json';
 import type { Template } from '@/lib/types';
 import { clsx } from 'clsx';
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export async function generateStaticParams() {
@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const template = (templates as Template[]).find((t) => t.id === params.id);
+  const { id } = await params;
+  const template = (templates as Template[]).find((t) => t.id === id);
   if (!template) return {};
 
   return {
@@ -29,9 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function getCodeFiles(template: Template) {
+function getCodeFiles(template: Template): CodeFile[] {
   // Representative code files shown in the preview
-  const files = [
+  const files: CodeFile[] = [
     {
       name: 'package.json',
       language: 'json' as const,
@@ -108,12 +109,18 @@ ${template.features.database ? 'DATABASE_URL=your_database_url\n' : ''}${templat
   return files;
 }
 
-export default function TemplatePage({ params }: Props) {
-  const template = (templates as Template[]).find((t) => t.id === params.id);
+export default async function TemplatePage({ params }: Readonly<Props>) {
+  const { id } = await params;
+  const template = (templates as Template[]).find((t) => t.id === id);
   if (!template) notFound();
 
   const codeFiles = getCodeFiles(template);
   const cloneUrl = `https://github.com/${template.githubRepo}`;
+  const maturityClasses: Record<string, string> = {
+    stable:       'border-dcyfr-accent/30 bg-dcyfr-accent/20 text-dcyfr-accent-200',
+    beta:         'border-yellow-500/30 bg-yellow-500/20 text-yellow-300',
+    experimental: 'border-purple-500/30 bg-purple-500/20 text-purple-300',
+  };
 
   return (
     <>
@@ -158,16 +165,7 @@ export default function TemplatePage({ params }: Props) {
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <div className="mb-3 flex flex-wrap items-center gap-2">
-                  <span
-                    className={clsx(
-                      'rounded-full border px-2.5 py-0.5 text-xs font-medium',
-                      template.maturity === 'stable'
-                        ? 'border-dcyfr-accent/30 bg-dcyfr-accent/20 text-dcyfr-accent-200'
-                        : template.maturity === 'beta'
-                          ? 'border-yellow-500/30 bg-yellow-500/20 text-yellow-300'
-                          : 'border-purple-500/30 bg-purple-500/20 text-purple-300'
-                    )}
-                  >
+                  <span className={clsx('rounded-full border px-2.5 py-0.5 text-xs font-medium', maturityClasses[template.maturity])}>
                     {template.maturity}
                   </span>
                   <span className="text-xs text-dcyfr-primary-400">v{template.version}</span>

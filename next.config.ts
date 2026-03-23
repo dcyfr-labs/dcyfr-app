@@ -18,7 +18,7 @@ export default withSentryConfig(nextConfig, {
 
   // Upload source maps only in CI/production
   widenClientFileUpload: true,
-  hideSourceMaps: true,
+  sourcemaps: { disable: false, deleteSourcemapsAfterUpload: true },
   disableLogger: true,
 
   // Tunnel Sentry requests through /api/monitoring to avoid ad-blockers

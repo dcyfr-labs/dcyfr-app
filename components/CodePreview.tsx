@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 
 type Language = 'typescript' | 'json' | 'bash';
 
-interface CodeFile {
+export interface CodeFile {
   name: string;
   language: Language;
   content: string;
