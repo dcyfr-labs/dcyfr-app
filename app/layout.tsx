@@ -115,7 +115,22 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <PageShell
+            nav={<SiteNav logo={DcyfrAppLogo} links={NAV_LINKS} />}
+            footer={
+              <SiteFooter
+                brand={{
+                  name: 'dcyfr.app',
+                  tagline: 'Starter template showcase',
+                }}
+                columns={FOOTER_COLUMNS}
+              />
+            }
+            padding="none"
+            maxWidth="full"
+          >
+            {children}
+          </PageShell>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
