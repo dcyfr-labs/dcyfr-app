@@ -50,38 +50,7 @@ export default function HomePage() {
   return (
     <>
       <TemplateJsonLd />
-      <div className="min-h-screen">
-        {/* Header / Nav */}
-        <header className="border-b border-dcyfr-primary-800/60 bg-dcyfr-primary-950/95 sticky top-0 z-10 backdrop-blur-sm">
-          <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <a href="/" className="flex items-center gap-2.5">
-              <span className="text-lg font-bold text-white">
-                dcyfr<span className="text-dcyfr-accent">.app</span>
-              </span>
-            </a>
-            <nav className="flex items-center gap-4 text-sm" aria-label="Main navigation">
-              <a
-                href="#templates"
-                className="text-dcyfr-primary-300 hover:text-white transition-colors"
-              >
-                Templates
-              </a>
-              <a
-                href="#matrix"
-                className="text-dcyfr-primary-300 hover:text-white transition-colors"
-              >
-                Compare
-              </a>
-              <a
-                href="https://dcyfr.io"
-                className="text-dcyfr-primary-300 hover:text-white transition-colors"
-              >
-                dcyfr.io ↗
-              </a>
-            </nav>
-          </div>
-        </header>
-
+      <div>
         {/* Hero */}
         <section
           className="border-b border-dcyfr-primary-800/40 bg-gradient-to-b from-dcyfr-primary-950 to-dcyfr-primary-900/60 px-4 py-16 sm:px-6 lg:px-8"
@@ -219,32 +188,6 @@ export default function HomePage() {
           </section>
         </main>
 
-        {/* Footer */}
-        <footer className="border-t border-dcyfr-primary-800/60 px-4 py-8 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm sm:flex-row">
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-white">
-                dcyfr<span className="text-dcyfr-accent">.app</span>
-              </span>
-              <span className="text-dcyfr-primary-300">·</span>
-              <span className="text-dcyfr-primary-300">Starter template showcase</span>
-            </div>
-            <nav className="flex gap-4 text-dcyfr-primary-300" aria-label="Footer navigation">
-              <a href="https://dcyfr.io" className="hover:text-white transition-colors">
-                dcyfr.io
-              </a>
-              <a href="https://github.com/dcyfr" className="hover:text-white transition-colors">
-                GitHub
-              </a>
-              <a href="/trademark" className="hover:text-white transition-colors">
-                Trademark
-              </a>
-              <a href="/privacy" className="hover:text-white transition-colors">
-                Privacy
-              </a>
-            </nav>
-          </div>
-        </footer>
       </div>
     </>
   );

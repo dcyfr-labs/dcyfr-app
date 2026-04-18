@@ -3,7 +3,44 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from '@/components/theme-provider';
+import { PageShell, SiteNav, SiteFooter } from '@/components/chrome';
 import './globals.css';
+
+const DcyfrAppLogo = (
+  <span className="text-lg font-bold tracking-tight">
+    dcyfr<span className="text-accent">.app</span>
+  </span>
+);
+
+const NAV_LINKS = [
+  { href: '/#templates', label: 'Templates' },
+  { href: '/#matrix', label: 'Compare' },
+  { href: 'https://dcyfr.io', label: 'dcyfr.io', external: true },
+];
+
+const FOOTER_COLUMNS = [
+  {
+    title: 'Showcase',
+    links: [
+      { href: '/#templates', label: 'Templates' },
+      { href: '/#matrix', label: 'Compare' },
+    ],
+  },
+  {
+    title: 'Ecosystem',
+    links: [
+      { href: 'https://dcyfr.io', label: 'dcyfr.io', external: true },
+      { href: 'https://github.com/dcyfr', label: 'GitHub', external: true },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { href: '/trademark', label: 'Trademark' },
+      { href: '/privacy', label: 'Privacy' },
+    ],
+  },
+];
 
 const inter = Inter({
   subsets: ['latin'],
