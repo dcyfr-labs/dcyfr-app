@@ -116,10 +116,18 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
 
   const codeFiles = getCodeFiles(template);
   const cloneUrl = `https://github.com/${template.githubRepo}`;
+  // Maturity state colors map to DCYFR semantic tokens:
+  //   stable       → success (green)   — shipped & reliable
+  //   beta         → warning (yellow)  — test phase, mind the caveats
+  //   experimental → secure  (blue)    — investigational; may shift
+  // Previously used `dcyfr-accent` (legacy palette; silently no-op'd in
+  // the semantic-var bridge) + hardcoded yellow/purple Tailwind scales.
+  // All three now resolve via CSS vars — per-site identity overrides
+  // these colors via the `theme-<site>` class.
   const maturityClasses: Record<string, string> = {
-    stable:       'border-dcyfr-accent/30 bg-dcyfr-accent/20 text-accent/70',
-    beta:         'border-yellow-500/30 bg-yellow-500/20 text-yellow-300',
-    experimental: 'border-purple-500/30 bg-purple-500/20 text-purple-300',
+    stable:       'border-success/30 bg-success/20 text-success',
+    beta:         'border-warning/30 bg-warning/20 text-warning',
+    experimental: 'border-secure/30 bg-secure/20 text-secure',
   };
 
   return (

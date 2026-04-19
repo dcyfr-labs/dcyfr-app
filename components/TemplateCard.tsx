@@ -93,7 +93,10 @@ export function TemplateCard({ template }: TemplateCardProps) {
         <div className="flex gap-3 text-xs text-muted-foreground">
           {template.features.typescript && (
             <span title="TypeScript">
-              <span className="text-blue-400">TS</span>
+              {/* `text-secure` resolves to the site's investigational blue
+                  (217 91% 60% under theme-dcyfr-app) — semantically "trusted
+                  language layer" + keeps the TS-brand blue hue. */}
+              <span className="text-secure">TS</span>
             </span>
           )}
           {template.features.testing && <span title="Testing included">✓ Tests</span>}

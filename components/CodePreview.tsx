@@ -66,8 +66,8 @@ export function CodePreview({ files, defaultFile }: CodePreviewProps) {
           className={clsx(
             'flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium transition-colors',
             copied
-              ? 'text-green-400'
-              : 'text-muted-foreground hover:text-white'
+              ? 'text-success'
+              : 'text-muted-foreground hover:text-foreground'
           )}
         >
           {copied ? (
