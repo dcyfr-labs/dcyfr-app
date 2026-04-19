@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CodePreview, type CodeFile } from '@/components/CodePreview';
 import templates from '@/data/templates.json';
@@ -155,13 +156,13 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
         <div className="mx-auto max-w-5xl">
           {/* Breadcrumb */}
           <nav className="mb-6 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-foreground transition-colors">
+            <Link href="/" className="hover:text-foreground transition-colors">
               dcyfr.app
-            </a>
+            </Link>
             <span aria-hidden="true">/</span>
-            <a href="/#templates" className="hover:text-foreground transition-colors">
+            <Link href="/#templates" className="hover:text-foreground transition-colors">
               Templates
-            </a>
+            </Link>
             <span aria-hidden="true">/</span>
             <span className="text-muted-foreground" aria-current="page">
               {template.name}
