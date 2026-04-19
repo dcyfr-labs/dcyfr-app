@@ -1,0 +1,8 @@
+{
+  "repo_notes": [
+    {
+      "content": "DCYFR core application. Document the main application architecture, feature modules, routing structure, and integration points with other DCYFR services.",
+      "author": "DCYFR Engineering"
+    }
+  ]
+}
