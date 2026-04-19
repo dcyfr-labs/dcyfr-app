@@ -7,7 +7,7 @@
     "dev": "next dev --port 3301",
     "build": "next build",
     "start": "next start --port 3301",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",

@@ -71,6 +71,11 @@
   /*
    * Identity: product showcase — violet + coral, softer radius.
    * Source: docs/dcyfr-workspace/sites/dcyfr-app.md
+   *
+   * Structure: unconditional block holds brand vars (primary, accent,
+   * radius, fonts) and the light-mode tinted card surface. Dark scope
+   * below inverts --card* so cards don't render as bright violet patches
+   * on the dark body — previously clobbered `.dark`'s card values.
    */
   .theme-dcyfr-app {
     --primary: 267 82% 60%;
@@ -82,6 +87,12 @@
     --card-foreground: 267 30% 12%;
     --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
     --font-mono: 'Geist Mono', ui-monospace, monospace;
+  }
+
+  .theme-dcyfr-app.dark,
+  .dark .theme-dcyfr-app {
+    --card: 267 25% 12%;
+    --card-foreground: 267 20% 96%;
   }
 }
 

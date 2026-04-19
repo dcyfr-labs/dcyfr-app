@@ -60,7 +60,7 @@ export function TemplateGrid({ templates }: TemplateGridProps) {
           <DcyfrButton
             variant="ghostly"
             size="sm"
-            className="mt-3 text-dcyfr-accent"
+            className="mt-3 text-secure"
             onClick={() =>
               setFilters({ framework: 'All', stack: 'All', maturity: 'All', search: '' })
             }

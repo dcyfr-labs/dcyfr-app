@@ -60,15 +60,15 @@ export default function HomePage() {
           aria-labelledby="hero-heading"
         >
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-dcyfr-accent">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-secure">
               Starter Templates
             </p>
             <h1
               id="hero-heading"
-              className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl"
+              className="mb-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl"
             >
               Build faster with{' '}
-              <span className="text-dcyfr-accent">production-ready</span> templates
+              <span className="text-secure">production-ready</span> templates
             </h1>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed">
               8 battle-tested starter templates for AI-powered applications. Every template
@@ -104,7 +104,7 @@ export default function HomePage() {
                 key={label}
                 className="flex-1 min-w-0 px-3 py-4 sm:px-6 text-center"
               >
-                <p className="text-lg font-bold text-white">{value}</p>
+                <p className="text-lg font-bold text-foreground">{value}</p>
                 <DcyfrBadge
                   variant="info"
                   size="sm"
@@ -127,7 +127,7 @@ export default function HomePage() {
             <div className="mx-auto max-w-7xl">
               <h2
                 id="templates-heading"
-                className="mb-8 text-2xl font-bold text-white"
+                className="mb-8 text-2xl font-bold text-foreground"
               >
                 All Templates
               </h2>
@@ -144,7 +144,7 @@ export default function HomePage() {
             <div className="mx-auto max-w-7xl">
               <h2
                 id="matrix-heading"
-                className="mb-2 text-2xl font-bold text-white"
+                className="mb-2 text-2xl font-bold text-foreground"
               >
                 Feature Comparison
               </h2>
@@ -163,7 +163,7 @@ export default function HomePage() {
             <div className="mx-auto max-w-7xl">
               <h2
                 id="deploy-heading"
-                className="mb-2 text-2xl font-bold text-white"
+                className="mb-2 text-2xl font-bold text-foreground"
               >
                 Deploy in seconds
               </h2>
@@ -180,14 +180,14 @@ export default function HomePage() {
                       className="flex items-center justify-between rounded-lg border border-input/60 bg-card/60 p-4"
                     >
                       <div>
-                        <p className="font-medium text-white">{t.name}</p>
+                        <p className="font-medium text-foreground">{t.name}</p>
                         <p className="text-xs text-muted-foreground">{t.stack.join(' · ')}</p>
                       </div>
                       <DcyfrButton
                         asChild
                         variant="ghostly"
                         size="sm"
-                        className="border border-input/60 bg-black text-white hover:bg-muted"
+                        className="border border-input/60 bg-foreground text-background hover:bg-muted"
                       >
                         <a
                           href={t.vercelDeployUrl!}

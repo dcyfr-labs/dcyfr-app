@@ -155,11 +155,11 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
         <div className="mx-auto max-w-5xl">
           {/* Breadcrumb */}
           <nav className="mb-6 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
-            <a href="/" className="hover:text-white transition-colors">
+            <a href="/" className="hover:text-foreground transition-colors">
               dcyfr.app
             </a>
             <span aria-hidden="true">/</span>
-            <a href="/#templates" className="hover:text-white transition-colors">
+            <a href="/#templates" className="hover:text-foreground transition-colors">
               Templates
             </a>
             <span aria-hidden="true">/</span>
@@ -178,59 +178,59 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
                   </span>
                   <span className="text-xs text-muted-foreground">v{template.version}</span>
                 </div>
-                <h1 className="mb-3 text-3xl font-bold text-white">{template.name}</h1>
+                <h1 className="mb-3 text-3xl font-bold text-foreground">{template.name}</h1>
                 <p className="text-muted-foreground leading-relaxed">{template.description}</p>
               </div>
 
               {/* Code preview */}
               <div>
-                <h2 className="mb-4 text-lg font-semibold text-white">Code Preview</h2>
+                <h2 className="mb-4 text-lg font-semibold text-foreground">Code Preview</h2>
                 <CodePreview files={codeFiles} />
               </div>
 
               {/* Environment setup */}
               <div>
-                <h2 className="mb-4 text-lg font-semibold text-white">Setup</h2>
+                <h2 className="mb-4 text-lg font-semibold text-foreground">Setup</h2>
                 <div className="rounded-xl border border-input/60 bg-card/60 p-5 space-y-3">
                   <div className="flex items-start gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-dcyfr-accent/20 text-xs font-bold text-dcyfr-accent">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secure/20 text-xs font-bold text-secure">
                       1
                     </span>
                     <div>
-                      <p className="text-sm font-medium text-white">Clone the template</p>
+                      <p className="text-sm font-medium text-foreground">Clone the template</p>
                       <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
                         npx create-dcyfr-app my-app --template {template.id}
                       </code>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-dcyfr-accent/20 text-xs font-bold text-dcyfr-accent">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secure/20 text-xs font-bold text-secure">
                       2
                     </span>
                     <div>
-                      <p className="text-sm font-medium text-white">Install dependencies</p>
+                      <p className="text-sm font-medium text-foreground">Install dependencies</p>
                       <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
                         cd my-app && npm install
                       </code>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-dcyfr-accent/20 text-xs font-bold text-dcyfr-accent">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secure/20 text-xs font-bold text-secure">
                       3
                     </span>
                     <div>
-                      <p className="text-sm font-medium text-white">Configure environment</p>
+                      <p className="text-sm font-medium text-foreground">Configure environment</p>
                       <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
                         cp .env.example .env.local
                       </code>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-dcyfr-accent/20 text-xs font-bold text-dcyfr-accent">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secure/20 text-xs font-bold text-secure">
                       4
                     </span>
                     <div>
-                      <p className="text-sm font-medium text-white">Start developing</p>
+                      <p className="text-sm font-medium text-foreground">Start developing</p>
                       <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
                         npm run dev
                       </code>
@@ -244,13 +244,13 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
             <aside className="space-y-5">
               {/* Clone CTA */}
               <div className="rounded-xl border border-input/60 bg-card/60 p-5">
-                <h2 className="mb-4 font-semibold text-white">Get Started</h2>
+                <h2 className="mb-4 font-semibold text-foreground">Get Started</h2>
                 <div className="space-y-2.5">
                   <a
                     href={cloneUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary"
+                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-primary"
                   >
                     <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
@@ -262,7 +262,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
                       href={template.vercelDeployUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex w-full items-center justify-center gap-2 rounded-lg border border-input/60 px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-dcyfr-accent/40 hover:text-white"
+                      className="flex w-full items-center justify-center gap-2 rounded-lg border border-input/60 px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-secure/40 hover:text-foreground"
                     >
                       ▲ Deploy to Vercel
                     </a>
@@ -272,7 +272,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
 
               {/* Stack info */}
               <div className="rounded-xl border border-input/60 bg-card/60 p-5">
-                <h2 className="mb-3 font-semibold text-white">Stack</h2>
+                <h2 className="mb-3 font-semibold text-foreground">Stack</h2>
                 <div className="flex flex-wrap gap-1.5">
                   {template.stack.map((tag) => (
                     <span
@@ -287,7 +287,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
 
               {/* Features */}
               <div className="rounded-xl border border-input/60 bg-card/60 p-5">
-                <h2 className="mb-3 font-semibold text-white">Included</h2>
+                <h2 className="mb-3 font-semibold text-foreground">Included</h2>
                 <ul className="space-y-2 text-sm">
                   {[
                     { flag: template.features.typescript, label: 'TypeScript' },

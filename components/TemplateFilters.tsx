@@ -37,8 +37,8 @@ function FilterButton({
       className={clsx(
         'rounded-full border px-3 py-1.5 text-xs font-medium transition-all duration-150',
         active
-          ? 'border-primary bg-primary text-white'
-          : 'border-input/60 text-muted-foreground hover:border-dcyfr-accent/50 hover:text-white'
+          ? 'border-primary bg-primary text-foreground'
+          : 'border-input/60 text-muted-foreground hover:border-secure/50 hover:text-foreground'
       )}
     >
       {children}
@@ -68,8 +68,8 @@ export function TemplateFilters({
           onChange={(e) => onChange({ ...filters, search: e.target.value })}
           className={clsx(
             'w-full rounded-lg border border-input/60 bg-card/60',
-            'pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-muted-foreground',
-            'focus:border-dcyfr-accent/60 focus:outline-none focus:ring-1 focus:ring-dcyfr-accent/40'
+            'pl-10 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground',
+            'focus:border-secure/60 focus:outline-none focus:ring-1 focus:ring-secure/40'
           )}
         />
       </div>

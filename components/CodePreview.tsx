@@ -51,8 +51,8 @@ export function CodePreview({ files, defaultFile }: CodePreviewProps) {
               className={clsx(
                 'border-b-2 px-3 py-2.5 text-xs font-medium transition-colors',
                 activeFile === file.name
-                  ? 'border-dcyfr-accent text-white'
-                  : 'border-transparent text-muted-foreground hover:text-white'
+                  ? 'border-secure text-foreground'
+                  : 'border-transparent text-muted-foreground hover:text-foreground'
               )}
             >
               {file.name}
