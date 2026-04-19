@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { TemplateCard } from './TemplateCard';
 import { TemplateFilters, type FilterState } from './TemplateFilters';
 import type { Template } from '@/lib/types';
+import { DcyfrButton } from '@/components/ui/dcyfr-button';
 
 interface TemplateGridProps {
   templates: Template[];
@@ -56,15 +57,16 @@ export function TemplateGrid({ templates }: TemplateGridProps) {
       ) : (
         <div className="py-16 text-center">
           <p className="text-dcyfr-primary-300">No templates match your filters.</p>
-          <button
-            type="button"
+          <DcyfrButton
+            variant="ghostly"
+            size="sm"
+            className="mt-3 text-dcyfr-accent"
             onClick={() =>
               setFilters({ framework: 'All', stack: 'All', maturity: 'All', search: '' })
             }
-            className="mt-3 text-sm text-dcyfr-accent hover:underline"
           >
             Clear filters
-          </button>
+          </DcyfrButton>
         </div>
       )}
     </div>
