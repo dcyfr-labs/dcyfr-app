@@ -1,0 +1,7 @@
+# DCYFR Templates
+
+> Production-ready starter templates for AI-powered applications — Next.js, GraphQL, React, Node.js, RAG, Chatbot, and more, all powered by @dcyfr/ai.
+
+## Pages
+- [Home](https://dcyfr.app/): Template showcase with feature comparison matrix for all starter templates.
+- [Templates](https://dcyfr.app/templates): Browse all production-ready starter templates; each template has a detail page at /templates/<id> with stack, features, and setup instructions.
