@@ -37,7 +37,7 @@ function FilterButton({
       className={clsx(
         'rounded-full border px-3 py-1.5 text-xs font-medium transition-all duration-150',
         active
-          ? 'border-primary bg-primary text-foreground'
+          ? 'border-primary bg-primary text-primary-foreground'
           : 'border-input/60 text-muted-foreground hover:border-secure/50 hover:text-foreground'
       )}
     >
