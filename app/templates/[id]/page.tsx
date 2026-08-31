@@ -199,7 +199,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
                     </span>
                     <div>
                       <p className="text-sm font-medium text-foreground">Clone the template</p>
-                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
+                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent-600/70 font-mono">
                         npx create-dcyfr-app my-app --template {template.id}
                       </code>
                     </div>
@@ -210,7 +210,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
                     </span>
                     <div>
                       <p className="text-sm font-medium text-foreground">Install dependencies</p>
-                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
+                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent-600/70 font-mono">
                         cd my-app && npm install
                       </code>
                     </div>
@@ -221,7 +221,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
                     </span>
                     <div>
                       <p className="text-sm font-medium text-foreground">Configure environment</p>
-                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
+                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent-600/70 font-mono">
                         cp .env.example .env.local
                       </code>
                     </div>
@@ -232,7 +232,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
                     </span>
                     <div>
                       <p className="text-sm font-medium text-foreground">Start developing</p>
-                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent/70 font-mono">
+                      <code className="mt-1 block rounded bg-background px-3 py-1.5 text-xs text-accent-600/70 font-mono">
                         npm run dev
                       </code>
                     </div>
