@@ -69,7 +69,7 @@ export function TemplateFilters({
           className={clsx(
             'w-full rounded-lg border border-input/60 bg-card/60',
             'pl-10 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground',
-            'focus:border-secure/60 focus:outline-none focus:ring-1 focus:ring-secure/40'
+            'focus:border-secure/60 focus:outline-hidden focus:ring-1 focus:ring-secure/40'
           )}
         />
       </div>
