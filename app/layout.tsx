@@ -33,13 +33,12 @@ const FOOTER_COLUMNS = [
       { href: 'https://github.com/dcyfr', label: 'GitHub', external: true },
     ],
   },
-  {
-    title: 'Legal',
-    links: [
-      { href: '/trademark', label: 'Trademark' },
-      { href: '/privacy', label: 'Privacy' },
-    ],
-  },
+];
+
+const LEGAL_LINKS = [
+  { href: '/privacy', label: 'Privacy' },
+  { href: 'https://dcyfr.ai/terms', label: 'Terms', external: true },
+  { href: 'https://dcyfr.ai/security', label: 'Security', external: true },
 ];
 
 const inter = Inter({
@@ -124,6 +123,7 @@ export default function RootLayout({
                   tagline: 'Starter template showcase',
                 }}
                 columns={FOOTER_COLUMNS}
+                legal={LEGAL_LINKS}
               />
             }
             padding="none"
