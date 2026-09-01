@@ -51,7 +51,7 @@ export function TemplateCard({ template }: TemplateCardProps) {
         // Prior code referenced `dcyfr-accent` without a shade — a legacy
         // palette token that resolves to nothing in the semantic-var bridge,
         // producing silent styling no-ops. Swapped to the accent semantic.
-        'hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/10 hover:border-accent/40'
+        'hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-600/10 hover:border-accent-600/40'
       )}
     >
       <DcyfrCardHeader className="px-0">
@@ -65,7 +65,7 @@ export function TemplateCard({ template }: TemplateCardProps) {
             {template.framework}
           </span>
         </div>
-        <h2 className="mt-3 text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
+        <h2 className="mt-3 text-lg font-semibold text-foreground transition-colors group-hover:text-accent-600">
           {template.name}
         </h2>
       </DcyfrCardHeader>

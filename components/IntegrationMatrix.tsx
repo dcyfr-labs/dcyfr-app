@@ -81,7 +81,7 @@ export function IntegrationMatrix({ templates }: IntegrationMatrixProps) {
               {FEATURES.map(({ key }) => (
                 <td key={key} className="px-3 py-3 text-center">
                   {template.features[key] ? (
-                    <span className="inline-flex items-center justify-center text-accent">
+                    <span className="inline-flex items-center justify-center text-accent-600">
                       <CheckIcon />
                       <span className="sr-only">Included</span>
                     </span>
