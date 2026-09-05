@@ -2,11 +2,11 @@
 
 Interactive showcase for DCYFR starter templates, live at **[dcyfr.app](https://dcyfr.app)**.
 
-`dcyfr.app` is a Next.js 15 / React 19 showcase app for DCYFR starter templates: browse the catalog at `/templates` and drill into individual templates at `/templates/[id]`. It is part of the dcyfr-labs site family alongside [dcyfr-io](https://github.com/dcyfr-labs/dcyfr-io), [dcyfr-bot](https://github.com/dcyfr-labs/dcyfr-bot), [dcyfr-build](https://github.com/dcyfr-labs/dcyfr-build), [dcyfr-codes](https://github.com/dcyfr-labs/dcyfr-codes), [dcyfr-tech](https://github.com/dcyfr-labs/dcyfr-tech), and [dcyfr-work](https://github.com/dcyfr-labs/dcyfr-work).
+`dcyfr.app` is a Next.js 16 / React 19 showcase app for DCYFR starter templates: browse the catalog at `/templates` and drill into individual templates at `/templates/[id]`. It is part of the dcyfr-labs site family alongside [dcyfr-io](https://github.com/dcyfr-labs/dcyfr-io), [dcyfr-bot](https://github.com/dcyfr-labs/dcyfr-bot), [dcyfr-build](https://github.com/dcyfr-labs/dcyfr-build), [dcyfr-codes](https://github.com/dcyfr-labs/dcyfr-codes), [dcyfr-tech](https://github.com/dcyfr-labs/dcyfr-tech), and [dcyfr-work](https://github.com/dcyfr-labs/dcyfr-work).
 
 ## Stack
 
-- Next.js 15 (App Router) / React 19 / Tailwind CSS
+- Next.js 16 (App Router) / React 19 / Tailwind CSS
 - shadcn primitives from the `@dcyfr-labs` registry (`registry.dcyfr.ai`); the shared chrome bundle (nav, footer, page shell, theme switcher/provider) lives in [`components/chrome/`](components/chrome/README.md)
 - Sentry instrumentation (client, server, and edge configs)
 - Playwright for e2e and visual-regression snapshots ([`e2e/`](e2e/README.md))
