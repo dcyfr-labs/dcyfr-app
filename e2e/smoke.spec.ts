@@ -24,9 +24,22 @@ test.describe('dcyfr.app smoke tests', () => {
 
     test('filter chips are interactive', async ({ page }) => {
       await page.goto(BASE_URL);
-      const firstChip = page.getByRole('button').first();
-      await expect(firstChip).toBeVisible();
-      await firstChip.click();
+      // Scoped to the templates section on purpose. Page-wide,
+      // `getByRole('button').first()` resolves to the v2 header's theme toggle,
+      // and this test used to assert nothing after the click — so it passed
+      // against whichever control happened to come first in the DOM.
+      const filters = page.locator('section#templates');
+      const allFrameworks = filters.getByRole('button', { name: 'All', exact: true }).first();
+      const web = filters.getByRole('button', { name: 'Web', exact: true });
+
+      await expect(allFrameworks).toHaveClass(/bg-primary/);
+      await expect(web).toBeVisible();
+
+      await web.click();
+
+      // The click moves the active state off the default chip onto this one.
+      await expect(web).toHaveClass(/bg-primary/);
+      await expect(allFrameworks).not.toHaveClass(/bg-primary/);
     });
 
     test('template detail page loads', async ({ page }) => {

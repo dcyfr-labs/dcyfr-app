@@ -118,7 +118,7 @@ export default function HomePage() {
         </div>
 
         {/* Template grid */}
-        <main>
+        <div>
           <section
             id="templates"
             className="px-4 py-12 sm:px-6 lg:px-8"
@@ -202,7 +202,7 @@ export default function HomePage() {
               </div>
             </div>
           </section>
-        </main>
+        </div>
 
       </div>
     </>
