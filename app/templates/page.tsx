@@ -70,7 +70,7 @@ export default function TemplatesPage() {
   return (
     <>
       <TemplatesJsonLd items={typedTemplates} />
-      <main>
+      <div>
         {/* Header */}
         <section
           className="border-b border-border/40 bg-gradient-to-b from-background to-card/60 px-4 py-12 sm:px-6 lg:px-8"
@@ -106,7 +106,7 @@ export default function TemplatesPage() {
             <TemplateGrid templates={typedTemplates} />
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

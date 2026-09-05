@@ -2,44 +2,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { ThemeProvider } from '@/components/theme-provider';
-import { PageShell, SiteNav, SiteFooter } from '@/components/chrome';
+import { ThemeProvider } from '@/components/chrome/theme-provider';
+import { SiteHeader, type HeaderNavItem } from '@/components/chrome/site-header';
+import { SiteFooter, type FooterLink } from '@/components/chrome/site-footer';
+import type { ChromeNavSection } from '@/components/chrome/nav-utils';
 import './globals.css';
-
-const DcyfrAppLogo = (
-  <span className="text-lg font-bold tracking-tight">
-    dcyfr<span className="text-accent-600">.app</span>
-  </span>
-);
-
-const NAV_LINKS = [
-  { href: '/#templates', label: 'Templates' },
-  { href: '/#matrix', label: 'Compare' },
-  { href: 'https://dcyfr.io', label: 'dcyfr.io', external: true },
-];
-
-const FOOTER_COLUMNS = [
-  {
-    title: 'Showcase',
-    links: [
-      { href: '/#templates', label: 'Templates' },
-      { href: '/#matrix', label: 'Compare' },
-    ],
-  },
-  {
-    title: 'Ecosystem',
-    links: [
-      { href: 'https://dcyfr.io', label: 'dcyfr.io', external: true },
-      { href: 'https://github.com/dcyfr', label: 'GitHub', external: true },
-    ],
-  },
-];
-
-const LEGAL_LINKS = [
-  { href: '/privacy', label: 'Privacy' },
-  { href: 'https://dcyfr.ai/terms', label: 'Terms', external: true },
-  { href: 'https://dcyfr.ai/security', label: 'Security', external: true },
-];
 
 const inter = Inter({
   subsets: ['latin'],
@@ -112,11 +79,67 @@ export const metadata: Metadata = {
   },
 };
 
+const DcyfrAppLogo = (
+  <span className="text-lg font-bold tracking-tight">
+    dcyfr<span className="text-accent-600">.app</span>
+  </span>
+);
+
+// The v1 nav list minus the `external` flag: v2 nav items carry no such flag
+// and every off-site link opens in the same tab.
+const NAV: HeaderNavItem[] = [
+  { href: '/#templates', label: 'Templates' },
+  { href: '/#matrix', label: 'Compare' },
+  { href: 'https://dcyfr.io', label: 'dcyfr.io' },
+];
+
+// The drawer is the only place every link is reachable below `md`: the header
+// link row and the footer link row are both `hidden md:flex`. Showcase and
+// Ecosystem are the v1 footer's two columns; Legal is its legal row, which the
+// one-line v2 footer keeps on desktop and drops below `md`.
+//
+// No item may carry `icon`. This file is a Server Component and SiteHeader is
+// 'use client', so an ElementType cannot cross the boundary.
+const SECTIONS: ChromeNavSection[] = [
+  {
+    id: 'showcase',
+    label: 'Showcase',
+    items: [
+      { href: '/#templates', label: 'Templates' },
+      { href: '/#matrix', label: 'Compare' },
+      { href: '/templates', label: 'All templates' },
+    ],
+  },
+  {
+    id: 'ecosystem',
+    label: 'Ecosystem',
+    items: [
+      { href: 'https://dcyfr.io', label: 'dcyfr.io' },
+      { href: 'https://github.com/dcyfr', label: 'GitHub' },
+    ],
+  },
+  {
+    id: 'legal',
+    label: 'Legal',
+    items: [
+      { href: '/privacy', label: 'Privacy' },
+      { href: 'https://dcyfr.ai/terms', label: 'Terms' },
+      { href: 'https://dcyfr.ai/security', label: 'Security' },
+    ],
+  },
+];
+
+// Flat, and short by design: the v2 footer link row sits on one line beside the
+// copyright. The v1 footer's two link columns live in the drawer above.
+const FOOTER: FooterLink[] = [
+  { href: '/privacy', label: 'Privacy' },
+  { href: 'https://dcyfr.ai/terms', label: 'Terms' },
+  { href: 'https://dcyfr.ai/security', label: 'Security' },
+];
+
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     // data-identity selects the theme package; the .dark class (added by
     // ThemeProvider) selects the scheme. They are orthogonal by construction —
@@ -130,25 +153,26 @@ export default function RootLayout({
       data-identity="slate"
       className={`${inter.variable} theme-dcyfr-app`}
     >
-      <body>
+      <body className="flex min-h-dvh flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <PageShell
-            nav={<SiteNav logo={DcyfrAppLogo} links={NAV_LINKS} />}
-            footer={
-              <SiteFooter
-                brand={{
-                  name: 'dcyfr.app',
-                  tagline: 'Starter template showcase',
-                }}
-                columns={FOOTER_COLUMNS}
-                legal={LEGAL_LINKS}
-              />
-            }
-            padding="none"
-            maxWidth="full"
+          {/* focus:z-50 clears the fixed header, which is z-40. */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:shadow-lg"
           >
+            Skip to content
+          </a>
+          <SiteHeader
+            logo={DcyfrAppLogo}
+            logoAriaLabel="dcyfr.app home"
+            links={NAV}
+            mobileNavSections={SECTIONS}
+          />
+          {/* pt-18 clears the fixed h-18 header. */}
+          <main id="main-content" className="flex-1 pt-18">
             {children}
-          </PageShell>
+          </main>
+          <SiteFooter brand="DCYFR" links={FOOTER} />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
