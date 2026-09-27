@@ -41,7 +41,7 @@ function TemplateJsonLd() {
             position: index + 1,
             item,
           })),
-        }),
+        }).replace(/</g, '\\u003c'),
       }}
     />
   );

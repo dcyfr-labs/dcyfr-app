@@ -148,7 +148,7 @@ export default async function TemplatePage({ params }: Readonly<Props>) {
             softwareVersion: template.version,
             programmingLanguage: template.primaryLanguage,
             license: 'https://opensource.org/licenses/MIT',
-          }),
+          }).replace(/</g, '\\u003c'),
         }}
       />
 
