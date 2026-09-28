@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 // (the `</script>` injection vector for raw JSON.stringify embeds).
 function safeJsonLd(value: unknown): string {
   return JSON.stringify(value)
-    .replace(/</g, '\\u003c')
-    .replace(/>/g, '\\u003e')
-    .replace(/&/g, '\\u0026');
+    .replaceAll('<', String.raw`\u003c`)
+    .replaceAll('>', String.raw`\u003e`)
+    .replaceAll('&', String.raw`\u0026`);
 }
 
 // JSON-LD ItemList for the canonical /templates listing URL (mirrors the
