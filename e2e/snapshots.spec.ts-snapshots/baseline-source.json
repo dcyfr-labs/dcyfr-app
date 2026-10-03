@@ -1,0 +1,21 @@
+{
+  "repository": "dcyfr-labs/dcyfr-app",
+  "head_sha": "5c858791894d6d0137e01e447362ee3895856e74",
+  "ref": "refs/heads/fix/dcyfr-labs-entity-name",
+  "base_url": "https://dcyfr-aacdj6hqo-dcyfr-labs.vercel.app",
+  "deployment": {
+    "id": 6826516847,
+    "sha": "5c858791894d6d0137e01e447362ee3895856e74",
+    "environment": "Preview",
+    "created_at": "2026-10-03T10:34:24Z"
+  },
+  "runner_os": "Linux",
+  "runner_arch": "X64",
+  "run_url": "https://github.com/dcyfr-labs/dcyfr-app/actions/runs/37116973584",
+  "snapshots": [
+    "home-desktop.png",
+    "home-mobile.png",
+    "templates-anchor-desktop.png",
+    "templates-anchor-mobile.png"
+  ]
+}
