@@ -2,6 +2,7 @@
   "name": "dcyfr-app-showcase",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "description": "dcyfr.app — Interactive template showcase for DCYFR starter templates",
   "scripts": {
     "dev": "next dev --port 3301",
