@@ -18,7 +18,7 @@
       "docker": false
     },
     "githubRepo": "dcyfr/dcyfr-ai-web",
-    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr/dcyfr-ai-web",
+    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr-labs/dcyfr-ai-web",
     "docsUrl": "https://dcyfr.app/templates/dcyfr-ai-web",
     "primaryLanguage": "TypeScript",
     "updatedAt": "2026-03-01T00:00:00Z"
@@ -66,7 +66,7 @@
       "docker": false
     },
     "githubRepo": "dcyfr/dcyfr-ai-react",
-    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr/dcyfr-ai-react",
+    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr-labs/dcyfr-ai-react",
     "docsUrl": "https://dcyfr.app/templates/dcyfr-ai-react",
     "primaryLanguage": "TypeScript",
     "updatedAt": "2026-03-01T00:00:00Z"
@@ -114,7 +114,7 @@
       "docker": false
     },
     "githubRepo": "dcyfr/dcyfr-ai-chatbot",
-    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr/dcyfr-ai-chatbot",
+    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr-labs/dcyfr-ai-chatbot",
     "docsUrl": "https://dcyfr.app/templates/dcyfr-ai-chatbot",
     "primaryLanguage": "TypeScript",
     "updatedAt": "2026-03-01T00:00:00Z"
@@ -186,7 +186,7 @@
       "docker": false
     },
     "githubRepo": "dcyfr/dcyfr-ai-sandbox",
-    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr/dcyfr-ai-sandbox",
+    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr-labs/dcyfr-ai-sandbox",
     "docsUrl": "https://dcyfr.app/templates/dcyfr-ai-sandbox",
     "primaryLanguage": "TypeScript",
     "updatedAt": "2026-03-01T00:00:00Z"
