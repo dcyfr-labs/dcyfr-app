@@ -71,7 +71,7 @@ export default function HomePage() {
               <span className="text-secure">production-ready</span> templates
             </h1>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed">
-              8 battle-tested starter templates for AI-powered applications. Every template
+              {typedTemplates.length} battle-tested starter templates for AI-powered applications. Every template
               ships with TypeScript, @dcyfr/ai integration, and the tooling you actually need.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
