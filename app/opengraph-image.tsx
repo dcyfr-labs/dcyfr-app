@@ -43,7 +43,7 @@ export default function OpenGraphImage() {
             maxWidth: '780px',
           }}
         >
-          Explore production-ready starter templates for AI-powered applications. Next.js, GraphQL, React, Node.js, RAG, Chatbot, and more.
+          Explore production-ready starter templates for AI-powered applications: React, Node.js, REST and GraphQL APIs, RAG and chatbots.
         </div>
         <div
           style={{

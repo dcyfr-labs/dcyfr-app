@@ -1,29 +1,5 @@
 [
   {
-    "id": "dcyfr-ai-web",
-    "name": "AI Web (Next.js)",
-    "packageName": "@dcyfr/ai-web",
-    "version": "2.0.0",
-    "description": "Production-ready full-stack Next.js web application with App Router, Drizzle ORM, JWT auth, and Tailwind CSS.",
-    "framework": "Web",
-    "stack": ["React", "TypeScript", "AI"],
-    "maturity": "stable",
-    "features": {
-      "typescript": true,
-      "testing": true,
-      "designSystem": true,
-      "dcyfrAi": true,
-      "auth": true,
-      "database": true,
-      "docker": false
-    },
-    "githubRepo": "dcyfr/dcyfr-ai-web",
-    "vercelDeployUrl": "https://vercel.com/new/clone?repository-url=https://github.com/dcyfr-labs/dcyfr-ai-web",
-    "docsUrl": "https://dcyfr.app/templates/dcyfr-ai-web",
-    "primaryLanguage": "TypeScript",
-    "updatedAt": "2026-03-01T00:00:00Z"
-  },
-  {
     "id": "dcyfr-ai-nodejs",
     "name": "AI Node.js",
     "packageName": "@dcyfr/ai-nodejs",

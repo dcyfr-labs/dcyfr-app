@@ -16,9 +16,8 @@ export const metadata: Metadata = {
     template: '%s | DCYFR Templates',
   },
   description:
-    'Explore 8 production-ready starter templates for AI-powered applications. Next.js, GraphQL, React, Node.js, RAG, Chatbot, and more — all powered by @dcyfr/ai.',
+    'Explore 7 production-ready starter templates for AI-powered applications: React, Node.js, REST and GraphQL APIs, RAG and chatbots, all built on @dcyfr/ai.',
   keywords: [
-    'next.js template',
     'react starter template',
     'ai application template',
     'graphql api template',
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'DCYFR Templates',
     title: 'DCYFR Templates — Production-Ready Starter Templates',
     description:
-      'Explore 8 production-ready starter templates for AI-powered applications.',
+      'Explore 7 production-ready starter templates for AI-powered applications.',
     images: [
       {
         url: '/og-image.png',
