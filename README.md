@@ -7,7 +7,7 @@ Interactive showcase for DCYFR starter templates, live at **[dcyfr.app](https://
 ## Stack
 
 - Next.js 16 (App Router) / React 19 / Tailwind CSS
-- shadcn primitives from the `@dcyfr-labs` registry (`registry.dcyfr.ai`); the shared chrome bundle (nav, footer, page shell, theme switcher/provider) lives in [`components/chrome/`](components/chrome/README.md)
+- shadcn primitives from the `@dcyfr-labs` registry (`registry.dcyfr.ai`); the shared chrome bundle (nav, footer, page shell, theme switcher/provider) lives in [`components/chrome/`](components/chrome/)
 - Sentry instrumentation (client, server, and edge configs)
 - Playwright for e2e and visual-regression snapshots ([`e2e/`](e2e/README.md))
 
@@ -55,5 +55,5 @@ Deployed on Vercel from `main` (hardened headers via `vercel.json`). The operati
 ## Further docs
 
 - [`AGENTS.md`](AGENTS.md) — agent conventions and project structure
-- [`components/chrome/README.md`](components/chrome/README.md) — shared chrome primitives
+- [`components/chrome/`](components/chrome/) — shared chrome primitives
 - [`e2e/README.md`](e2e/README.md) — test suite notes

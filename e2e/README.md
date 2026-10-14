@@ -30,5 +30,4 @@ Fails if diff > 5% (`maxDiffPixelRatio: 0.05`).
 
 ## Related
 
-- [Polish loop architecture](../../../../docs/dcyfr-workspace/polish-loop.md)
-- [`nexus/scout-prompts/dcyfr-app.md`](../../../../nexus/scout-prompts/dcyfr-app.md)
+These baselines also feed the maintainers' design polish loop (trend checks and design-token proposals), which runs from a private workspace and is not part of this repo.

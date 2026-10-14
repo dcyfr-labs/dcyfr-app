@@ -1,4 +1,4 @@
-<!-- TLP:AMBER -->
+<!-- TLP:CLEAR -->
 # dcyfr.app Deployment Runbook
 
 ## Overview
@@ -12,7 +12,7 @@
 | WAF       | Vercel Web Application Firewall (enable in project settings)        |
 | Analytics | Vercel Analytics + Speed Insights (enable in project settings)      |
 | Errors    | Sentry project: `dcyfr-app`                                         |
-| Repo      | `dcyfr/dcyfr-app`                                                   |
+| Repo      | `dcyfr-labs/dcyfr-app`                                                   |
 
 ## Branch → Environment Mapping
 
@@ -31,7 +31,7 @@ Set in **Project Settings → Environment Variables**:
 | --------------------------- | --------------------- | -------------------------------- |
 | `NEXT_PUBLIC_SENTRY_DSN`    | All                   | Sentry DSN for `dcyfr-app`       |
 | `SENTRY_DSN`                | Production, Preview   | Server-side Sentry DSN           |
-| `SENTRY_ORG`                | Production            | Sentry org slug (`dcyfr`)        |
+| `SENTRY_ORG`                | Production            | Sentry org slug (`dcyfr-labs`, the default in `next.config.ts`)        |
 | `SENTRY_PROJECT`            | Production            | Sentry project (`dcyfr-app`)     |
 | `SENTRY_AUTH_TOKEN`         | Production            | Source map upload at build time  |
 
@@ -72,4 +72,4 @@ All DNS/SSL is configured in the Vercel dashboard:
 - [ ] `curl -I https://dcyfr.app` → 200 OK
 - [ ] Sentry: no new errors in last 5 min
 - [ ] Vercel Analytics: traffic flowing
-- [ ] Template detail page loads: `https://dcyfr.app/templates/dcyfr-ai-web`
+- [ ] Template detail page loads: `https://dcyfr.app/templates/dcyfr-ai-nodejs`
